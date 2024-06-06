@@ -16,11 +16,11 @@ const Footer = () => {
             >
               <h5>We For You</h5>
               <h6>01845550939</h6>
-              <p>Boshurhat Companigonj Naokhali</p>
+              <p>Boshurhat Companigonj Noakhali</p>
               <hr />
               <h5>জীবন আলো</h5>
               <h6>01845550939</h6>
-              <p>Boshurhat Companigonj Naokhali</p>
+              <p>Boshurhat Companigonj Noakhali</p>
               <hr />
             </motion.div>
           </div>

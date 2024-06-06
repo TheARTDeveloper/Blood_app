@@ -12,10 +12,12 @@ const Developer = () => {
       <div className="developer">
         <div className="developer_contain">
           <p>
-            ©copyrights & Developed By{" "}
+            ©copyrights & Developed By AR Tahmid ||{" "}
             <span className="ancor">
               {" "}
-              <a href="https://facboook.com">The ART developer</a>
+              <a href="https://www.facebook.com/profile.php?id=61554903244756&amp;mibextid=ZbWKwL">
+                The ART developer
+              </a>
             </span>
           </p>
         </div>

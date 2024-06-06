@@ -10,8 +10,8 @@ const Nav = () => {
     <nav>
       <motion.div
         className="logo"
-        initial={{ y: "-50px" }}
-        whileInView={{ y: "50px" }}
+        initial={{ y: "-60px" }}
+        whileInView={{ y: "60px" }}
         transition={{
           repeat: Infinity,
           repeatDelay: 1.5,
