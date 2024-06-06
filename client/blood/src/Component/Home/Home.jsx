@@ -12,6 +12,7 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 2 }}
+      style={{ overflow: "hidden" }}
     >
       <Header />
       <GetDoner />
