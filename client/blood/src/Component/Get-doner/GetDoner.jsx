@@ -13,7 +13,7 @@ const GetDoner = () => {
   const userData = async () => {
     try {
       await axios
-        .get("http://localhost:3001/get-doner")
+        .get("https://blood-doner-app.onrender.com/get-doner")
         .then((res) => setData(res.data))
         .then((err) => console.log(err));
     } catch (error) {

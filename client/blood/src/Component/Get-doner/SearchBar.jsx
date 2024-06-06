@@ -6,7 +6,7 @@ const SearchBar = ({ setResult }) => {
 
   const fetchData = async (value) => {
     try {
-      await fetch("http://localhost:3001/get-doner")
+      await fetch("https://blood-doner-app.onrender.com/get-doner")
         .then((res) => res.json())
         .then((json) => {
           const result = json.filter((user) => {
