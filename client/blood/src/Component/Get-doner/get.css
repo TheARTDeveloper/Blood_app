@@ -1,0 +1,39 @@
+#doner_list{
+    background-color: rgba(243, 224, 224, 0.494);
+    border-radius: 10px;
+    
+    padding-bottom: 30px;
+}
+
+.red-hero-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.red-hero-section h1{
+    color: rgb(151, 7, 27);
+    padding: 20px 0;
+    font-weight: 700;
+    text-align: center;
+}
+.red-hero-contain{
+    width: 350px;
+
+}
+.hero{
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 2px 2px 2px gray;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: rgb(113, 112, 112);
+}
+.social-img{
+    background-color: blue;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
