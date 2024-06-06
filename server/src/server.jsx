@@ -11,7 +11,7 @@ const { mongodbLocal, mongodbGlobal } = require("./secret.jsx");
 app.use(morgan("dev"));
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://blood-mu.vercel.app",
     methods: ["post", "get"],
     credentials: true,
   })
