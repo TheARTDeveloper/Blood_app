@@ -5,10 +5,12 @@ import SearchBar from "./SearchBar";
 import SearchResult from "./SearchResult";
 import facebook from "../../assets/image/facebook.png";
 import { motion } from "framer-motion";
+import Loading from "./Loading";
 
 const GetDoner = () => {
   const [data, setData] = useState([]);
   const [result, setResult] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const userData = async () => {
     try {
@@ -16,6 +18,7 @@ const GetDoner = () => {
         .get("https://blood-doner-app.onrender.com/get-doner")
         .then((res) => setData(res.data))
         .then((err) => console.log(err));
+      setLoading(true);
     } catch (error) {
       console.log(error);
     }
@@ -44,27 +47,33 @@ const GetDoner = () => {
           <SearchResult result={result} />
           <hr />
         </div>
-        {data.map((item) => (
-          <motion.div
-            className="col-md-3"
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="hero">
-              <h3>{item.name}</h3>
-              <h5>{item.bloodGroup}</h5>
-              <h6>{item.phone}</h6>
-              <h6>{item.ano_phone}</h6>
-              <p>{item.address}</p>
+        {loading ? (
+          data.map((item) => {
+            return (
+              <motion.div
+                className="col-md-3"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="hero">
+                  <h3>{item.name}</h3>
+                  <h5>{item.bloodGroup}</h5>
+                  <h6>{item.phone}</h6>
+                  <h6>{item.ano_phone}</h6>
+                  <p>{item.address}</p>
 
-              <a href={item.social}>
-                {" "}
-                <img className="social-img" src={facebook} alt="" />
-              </a>
-            </div>
-          </motion.div>
-        ))}
+                  <a href={item.social}>
+                    {" "}
+                    <img className="social-img" src={facebook} alt="" />
+                  </a>
+                </div>
+              </motion.div>
+            );
+          })
+        ) : (
+          <Loading />
+        )}
       </div>
     </div>
   );

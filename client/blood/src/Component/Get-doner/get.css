@@ -1,39 +1,96 @@
-#doner_list{
-    background-color: rgba(243, 224, 224, 0.494);
-    border-radius: 10px;
-    
-    padding-bottom: 30px;
+#doner_list {
+  background-color: rgba(243, 224, 224, 0.494);
+  border-radius: 10px;
+
+  padding-bottom: 30px;
 }
 
-.red-hero-section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+.red-hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.red-hero-section h1{
-    color: rgb(151, 7, 27);
-    padding: 20px 0;
-    font-weight: 700;
-    text-align: center;
+.red-hero-section h1 {
+  color: rgb(151, 7, 27);
+  padding: 20px 0;
+  font-weight: 700;
+  text-align: center;
 }
-.red-hero-contain{
-    width: 350px;
+.red-hero-contain {
+  width: 350px;
+}
+.hero {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 2px 2px 2px gray;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: rgb(113, 112, 112);
+}
+.social-img {
+  background-color: blue;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
 
+/*loader */
+
+.loader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.hero{
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 2px 2px 2px gray;
-    margin-top: 20px;
-    border-radius: 10px;
-    color: rgb(113, 112, 112);
+.lds-ripple,
+.lds-ripple div {
+  box-sizing: border-box;
 }
-.social-img{
-    background-color: blue;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid currentColor;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
 }

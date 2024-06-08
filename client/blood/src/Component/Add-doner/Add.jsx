@@ -18,17 +18,14 @@ const Add = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
-        "https://blood-doner-app.onrender.com/add-doner",
-        {
-          name,
-          bloodGroup,
-          phone,
-          ano_phone,
-          address,
-          social,
-        }
-      );
+      await axios.post("https://blood-doner-app.onrender.com/add-doner", {
+        name,
+        bloodGroup,
+        phone,
+        ano_phone,
+        address,
+        social,
+      });
 
       navigate("/");
     } catch (error) {
